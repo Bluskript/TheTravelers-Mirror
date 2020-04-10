@@ -1,0 +1,56 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	the travelers: leaderboard
+</title><meta name="viewport" content="width=device-width, initial-scale=1" /><meta property="og:title" content="the travelers" /><meta property="og:type" content="website" /><meta property="og:url" content="https://thetravelers.online" /><meta property="og:image" content="https://thetravelers.online/imgs/logo.png" /><meta property="og:description" content="leaderboard" /><meta property="twitter:card" content="summary_large_image" /><meta property="twitter:image" content="https://thetravelers.online/imgs/logo.png" /><meta name="twitter:title" content="the travelers" /><meta name="twitter:description" content="leaderboard" /><link rel="stylesheet" href="./resources_v66/__travelers.css" /><link rel="stylesheet" href="./resources_v66/_otherpages.css" />
+    <style>
+        div.content-dip {
+            max-width:550px;
+        }
+    </style>
+</head>
+<body>
+    <form method="post" action="./leaderboard" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="E0KVEWLpQJL5ClDGywDSvsaM6cQlPkZwFamxBbun0ETbEIULxCQUfAGe+IOWcW5uImqrAjtwUaLXbtW5ht7jXoKTOtcv1kvt2XB6yqaQHkVU2fOdMWUwPe+qplMFTojpHXCh1B232vwCcdX4JYJh4w==" />
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="7333A271" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="x2rnL9kROUJe2eAOaOI4HtbrCxL6ewTYPtOVkNfCes6LbKuvOsGXOgAAfeP48B6ck8rH6oSB/XS1pj/0XtzKCxCXlCD/pcAMw/GcQXDIVAilPvp8qltuTsgsiiR7hMF3" />
+        <div class="other-siteback"></div>
+
+        <div class="header">
+            <h2 class="banner-title"><a class="title-link" href='./'>the&nbsp;travelers</a></h2>&nbsp;
+            <h3 class="game-subtitle">leaderboard</h3>
+        </div>
+
+        <div class="content-dip">
+            <div class="content-box">
+                <h3 class="post-title">leaderboard</h3>
+                <p class="post-body">below are the current top ten players leading by xp in the game. next re-count is in: <span id="minutesLeft">179</span> minutes.</p>
+                <div style="text-align:center;background-color:rgba(0,0,0,0);">
+                    <div id="leaders" style="display:inline-block;text-align:left;background-color:rgba(0,0,0,0);"></div>
+                </div>
+            </div>
+            <div class='post-spacer'></div>
+        </div>
+        <input name="leaderJSON" type="hidden" id="leaderJSON" value="[{&quot;username&quot;:&quot;Fit&quot;,&quot;level&quot;:83,&quot;xp&quot;:1115321},{&quot;username&quot;:&quot;Why&quot;,&quot;level&quot;:76,&quot;xp&quot;:879903},{&quot;username&quot;:&quot;pepsilord420&quot;,&quot;level&quot;:117,&quot;xp&quot;:2891257},{&quot;username&quot;:&quot;cool&quot;,&quot;level&quot;:85,&quot;xp&quot;:1218435},{&quot;username&quot;:&quot;pfg&quot;,&quot;level&quot;:182,&quot;xp&quot;:9756408},{&quot;username&quot;:&quot;man&quot;,&quot;level&quot;:118,&quot;xp&quot;:2968728},{&quot;username&quot;:&quot;LogicM&quot;,&quot;level&quot;:140,&quot;xp&quot;:4726844},{&quot;username&quot;:&quot;toragadude&quot;,&quot;level&quot;:132,&quot;xp&quot;:4048660},{&quot;username&quot;:&quot;t3hmadhatter&quot;,&quot;level&quot;:113,&quot;xp&quot;:2640530},{&quot;username&quot;:&quot;Jeevan&quot;,&quot;level&quot;:116,&quot;xp&quot;:2823173}]" />
+
+        <script>
+            (function () {
+                let jar = JSON.parse(document.getElementById("leaderJSON").value),
+                    boardEl = document.getElementById("leaders");
+
+                jar.sort(function (a, b) {
+                    return b.xp - a.xp;
+                });
+
+                for (let i = 0; i < jar.length; i++) {
+                    boardEl.innerHTML += "<p class='lboard-wide clearback'>" + (i + 1) + ")</p><span class='lboard-main'><b>" + jar[i].username + "</b>: level " + (jar[i].level + 1) + "</span><br /><span class='lboard-sub'>" + jar[i].xp + " total xp</span><br /><br />";
+                }
+            })();
+        </script>
+    </form>
+</body>
+</html>
