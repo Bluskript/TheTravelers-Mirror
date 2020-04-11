@@ -1,4 +1,4 @@
-# The Travellers
+# The Travelers
 
 ## **THIS IS AN UNOFFICIAL REPOSITORY**
 
